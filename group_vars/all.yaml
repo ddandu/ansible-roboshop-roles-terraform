@@ -1,9 +1,20 @@
-MONGODB_HOST: mongodb.devresh.online
-REDIS_HOST: redis.devresh.online
-CATALOGUE_HOST: catalogue.devresh.online
-MYSQL_HOST: mysql.devresh.online
-CART_HOST: cart.devresh.online
-SHIPPING_HOST: shipping.devresh.online
-USER_HOST: user.devresh.online
-RABBITMQ_HOST: rabbitmq.devresh.online
-PAYMENT_HOST: payment.devresh.online
+# MONGODB_HOST: mongodb.devresh.online
+# REDIS_HOST: redis.devresh.online
+# CATALOGUE_HOST: catalogue.devresh.online
+# MYSQL_HOST: mysql.devresh.online
+# CART_HOST: cart.devresh.online
+# SHIPPING_HOST: shipping.devresh.online
+# USER_HOST: user.devresh.online
+# RABBITMQ_HOST: rabbitmq.devresh.online
+# PAYMENT_HOST: payment.devresh.online
+
+
+MONGODB_HOST: mongodb-{{ env }}.devresh.online # mongodb-dev.devresh.online
+REDIS_HOST: redis-{{ env }}.devresh.online
+CATALOGUE_HOST: catalogue.backend-alb-{{ env }}.devresh.online
+CART_HOST: cart.backend-alb-{{ env }}.devresh.online
+USER_HOST: user.backend-alb-{{ env }}.devresh.online
+RABBITMQ_HOST: rabbitmq-{{ env }}.devresh.online
+MYSQL_HOST: mysql-{{ env }}.devresh.online
+SHIPPING_HOST: shipping.backend-alb-{{ env }}.devresh.online
+PAYMENT_HOST: payment.backend-alb-{{ env }}.devresh.online
