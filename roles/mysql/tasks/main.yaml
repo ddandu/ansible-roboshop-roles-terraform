@@ -3,6 +3,18 @@
     name: mysql-server
     state: present
 
+- name: Ensure python3-pip is installed
+  yum:
+    name: python3-pip
+    state: present
+
+- name: Install boto3 and botocore
+  pip:
+    name:
+      - boto3
+      - botocore
+    executable: pip3
+
 - name: start and enable mysql
   ansible.builtin.service:
     name: mysqld
