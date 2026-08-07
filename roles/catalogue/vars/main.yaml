@@ -1,1 +1,1 @@
-MONGODB_HOST: mongodb.devresh.online
+MONGODB_HOST: mongodb-{{ env }}.devresh.online
